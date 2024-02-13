@@ -1,0 +1,25 @@
+/* create a variable called light-color and set it to #f4f4f4 
+   I use variable for something I'll use over and over*/
+$light-color: #f4f4f4;
+$font-stack: Arial, Helvetica, sans-serif;
+$primary-color: #0e6cff;
+// $primary-color: #e0ffff;
+$secondary-color: #ff8700;
+
+// Set text color based on background
+@function set-text-color($color) {
+   @if(lightness($color) > 70 ) {
+      @return #333;
+   } @else {
+      @return #fff;
+   }
+}
+
+// Set background & text color
+// mixing is like a function, but it doesn't actually return anything
+// The color takes the set-text-color function as value
+// The color is going to take the opposite color of the background
+@mixin set-background($color) {
+   background-color: $color;
+   color: set-text-color($color);
+}

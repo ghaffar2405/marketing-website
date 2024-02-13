@@ -1,0 +1,15 @@
+// Responsiveness
+// any screen that is less than 700px
+@media(max-width: 700px) {
+    .showcase {
+        height: 400px;
+    }
+
+.showcase-content {
+        text-align: center;
+
+        img {
+            display: none;
+        }
+    }
+}

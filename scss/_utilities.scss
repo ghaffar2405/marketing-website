@@ -1,0 +1,31 @@
+.container {
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: auto;
+    overflow: auto;
+}
+
+// Margin & Padding Classess
+// creating a variable & setting it to list of (1,2,3,4,5)
+$spaceamounts: (1,2,3,4,5);
+
+// It automatically create all the classes in style.css
+// Loop through each list
+@each $space in $spaceamounts {
+      // creating classes & able to access it thorugh #
+   .m-#{$space} {
+      margin: #{$space}rem; // setting each sapce or margin in rem 
+   }
+
+   .my-#{$space} {
+      margin: #{$space}rem 0; // only the top & bottom
+   }
+
+   .p-#{$space} {
+      padding: #{$space}rem; 
+   }
+
+   .py-#{$space} {
+      padding: #{$space}rem 0;
+   }
+}
